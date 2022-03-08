@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>你好:{{user.username}}</h1>
-    <h2>年龄{{age.age}}</h2>
-    <h3>性别{{sex.sex}}</h3>
+    <h1>Hello,{{ current_user.username }}!</h1>
+    大VDVDSV
     {% for post in posts %}
         <div>
             <p>{{ post.author.username}} say:<b>{{post.body}}</b></p>

@@ -11,11 +11,12 @@
     </head>
     <body>
         <div style="hight:30px;background-color: aqua" >
-
-
-            欢迎:
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('login') }}">Login</a>
+             <a href="{{ url_for('主页') }}">Home</a>
+            {% if current_user.is_anonymous %}
+            <a href="{{ url_for('登录') }}">Login</a>
+            {% else %}
+            <a href="{{ url_for('退出') }}">Logout</a>
+            {% endif %}
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}
