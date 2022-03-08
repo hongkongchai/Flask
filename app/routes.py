@@ -27,16 +27,7 @@ def index():
         {
             'author': {'username': 'hk2'},
             'body': '大方，尊贵'
-        },
-        {
-            'author': {'username': 'hk2'},
-            'body': '大方，尊贵'
-        },
-        {
-            'author': {'username': 'hk2'},
-            'body': '大方，尊贵'
-        },
-        {
+        },        {
             'author': {'username': 'hk2'},
             'body': '大方，尊贵'
         }
