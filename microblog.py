@@ -1,6 +1,6 @@
 #!/usr/bin/env python # -*- coding:utf-8 -*-
-from app import app,db
-from app.models import User,Post
+from app import app, db
+from app.models import User, Post
 
 @app.shell_context_processor
 def mask_shell_context():

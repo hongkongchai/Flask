@@ -10,14 +10,16 @@
     {% endif %}
     </head>
     <body>
-        <div style="hight:30px;background-color: aqua" >
-             <a href="{{ url_for('主页') }}">Home</a>
-            {% if current_user.is_anonymous %}
-            <a href="{{ url_for('登录') }}">Login</a>
-            {% else %}
-            <a href="{{ url_for('退出') }}">Logout</a>
-            {% endif %}
-        </div>
+        <div style="hight:30px;background-color: aqua">微博:
+			<a href="{{ url_for('index') }}">主页</a>
+            <a href="{{ url_for('explore') }}">Explore</a>
+			{% if current_user.is_anonymous %}
+				<a href="{{ url_for('login') }}">登录</a>
+			{% else %}
+				<a href="{{ url_for('user', username=current_user.username) }}">个人资料</a>
+				<a href="{{ url_for('logout') }}">退出</a>
+			{% endif %}
+		</div>
         <hr>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
