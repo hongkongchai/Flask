@@ -1,26 +1,12 @@
 {% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
 
-{% block content %}
-    <h1>修改资料</h1>
-    <form action="", method="post">
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}<br>
-            {% for error in form.username.errors %}
-                <span style="color: brown">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-
-        <p>
-            {{ form.about_me.label }}<br>
-            {{ form.about_me(size=50,raw=4) }}<br>
-            {% for error in form.about_me.errors %}
-                <span style="color: brown">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-			{{ form.submit() }}
-		</p>
-    </form>
+{% block app_content %}
+	<h1>编辑个人资料</h1>
+	<div class="row">
+		<div class="col-md-4">
+			{{ wtf.quick_form(form) }}
+		</div>
+	</div>
 {% endblock %}
+
